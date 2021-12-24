@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/swiper.min.css"/>
+  <link rel="stylesheet" href="css/layui.css">
+  <link rel="stylesheet" href="css/animate.min.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark  container nav-bg" aria-label="Fourth navbar example">
+      <div class="container-fluid">
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+          <trans oldtip="Expand at md" newtip="在MD扩张"><img src="images/logo.png" /></trans>
+        </a>
+        <!-- 手机菜单栏 -->
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 导航 -->
+        <div class="navbar-collapse collapse" id="navbarsExample04" style="">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <trans oldtip="Home" newtip="家">首页</trans>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <trans oldtip="Link" newtip="链接">找装修</trans>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <trans oldtip="Disabled" newtip="残废">看案列</trans>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <trans oldtip="Disabled" newtip="残废">装修百科</trans>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <trans oldtip="Disabled" newtip="残废">关于我们</trans>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="swiper mySwiper banner ">
+      <div class="swiper-wrapper banners">
+        <div class="swiper-slide"><img src="images/banner.png"/></div>
+        <div class="swiper-slide"><img src="images/banner.png"/></div>
+        <div class="swiper-slide"><img src="images/banner.png"/></div>
+      </div>
+      <div class="swiper-button-next d-none d-md-block"></div>
+      <div class="swiper-button-prev d-none d-md-block"></div>
+      <div class="swiper-pagination"></div>
+      <div class="container">
+        <form class=" layui-form d-none d-md-block" method="get" >
+          <h2>免费获取装修报价</h2>
+          <p>联系人：</p>
+          
+          <input type="text" name="username" placeholder="请输入姓名" lay-verify="required" lay-reqtext="姓名是必填项，岂能为空？" placeholder="请输入" autocomplete="off" class="layui-input">
+          <p>联系电话：</p>
+          <input type="tel" name="phone" placeholder="请输入电话号码" lay-verify="required|phone" autocomplete="off" class="layui-input">
+          <p>装修户型</p>
+          <select required name="quiz2">
+            <option>选择装修户型</option>
+            <option>一居室</option>
+            <option>二居室</option>
+            <option>三居室</option>
+            <option>别墅</option>
+            <option>小户型</option>
+          </select>
+          <p>装修风格</p>
+          <select required>
+            <option>选择装风格</option>
+            <option>简约</option>
+            <option>现代</option>
+          </select>
+          <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <!-- 装修案列 -->
+      <div class="case_list">
+        <div class="title wow bounceInUp ">
+          <h2>装修案例</h2>
+          <p>风格百变 众多客户的选择</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col wow bounceInUp "  data-wow-delay=".3s">
+            <a href="#">
+              <div class="card h-100">
+                <img src="images/anlie01.png" class="card-img-top" alt="...">
+                <div class="card-footer">
+                  <p>[现代简约]千图花园大厦A栋128㎡</p>
+                  <span>三居室</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow bounceInUp"   data-wow-delay=".5s">
+            <a href="#">
+              <div class="card h-100">
+                <img src="images/anlie02.png" class="card-img-top" alt="...">
+                <div class="card-footer">
+                  <p>[现代简约]千图花园大厦A栋128㎡</p>
+                  <span>三居室</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow bounceInUp"   data-wow-delay=".7s">
+            <a href="#">
+              <div class="card h-100">
+                <img src="images/anlie03.png" class="card-img-top" alt="...">
+                <div class="card-footer">
+                  <p>[现代简约]千图花园大厦A栋128㎡</p>
+                  <span>三居室</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a class="btn  but wow bounceInUp" href="#" role="button">more</a>
+      </div>
+      <!-- 设计团队 -->
+      <div class="team">
+        <div class="title wow bounceInUp "data-wow-delay=".7s">
+          <h2>设计团队</h2>
+          <p>风格百变 众多客户的选择</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col wow slideInLeft" data-wow-delay=".7s">
+            <a href="#">
+              <div class="card h-100">
+                <img src="images/taem01.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">千小兔 · 设计总监</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow slideInLeft " data-wow-delay=".5s">
+            <a href="#">
+              <div class="card h-100">
+                <img src="images/taem02.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">千小兔 · 首席设计师</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow slideInRight " data-wow-delay=".5s">
+            <a href="#">
+              <div class="card h-100">
+                <img src="images/taem03.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">千小兔 · 设计总监</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow slideInRight" data-wow-delay=".7s">
+            <a href="#">
+              <div class="card h-100">
+                <img src="images/taem04.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">千小兔 · 设计总监</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 装修百科 -->
+      <div class="data">
+        <div class="title wow bounceInUp">
+          <h2>装修百科</h2>
+          <p>风格百变 众多客户的选择</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2  ">
+          <div class="col  wow slideInLeft" >
+            <a href="#">
+              <div class="card mb-3" style="max-width: 600px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="images/baike01.png" class="img-fluid rounded-start d-none d-md-block" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">风格与功能两相宜 充满巧思工业风小窝</h5>
+                      <p class="card-text">为了符合工业风的调性，空间感的营造是重点，在狭长型的格局中， 设计师尽量将量体 往两边放，保留中间的开阔感。在家具的装饰和搭配上，硬朗而随性业风气息也进一步蔓延…</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow slideInRight">
+            <a href="#">
+              <div class="card mb-3" style="max-width: 600px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="images/baike02.png" class="img-fluid rounded-start d-none d-md-block" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">风格与功能两相宜 充满巧思工业风小窝</h5>
+                      <p class="card-text">为了符合工业风的调性，空间感的营造是重点，在狭长型的格局中， 设计师尽量将量体 往两边放，保留中间的开阔感。在家具的装饰和搭配上，硬朗而随性业风气息也进一步蔓延…</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow slideInLeft">
+            <a href="#">
+              <div class="card mb-3" style="max-width: 600px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="images/baike03.png" class="img-fluid rounded-start d-none d-md-block" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">风格与功能两相宜 充满巧思工业风小窝</h5>
+                      <p class="card-text">为了符合工业风的调性，空间感的营造是重点，在狭长型的格局中， 设计师尽量将量体 往两边放，保留中间的开阔感。在家具的装饰和搭配上，硬朗而随性业风气息也进一步蔓延…</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col wow slideInRight">
+            <a href="#">
+              <div class="card mb-3" style="max-width: 600px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="images/baike04.png" class="img-fluid rounded-start d-none d-md-block" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">风格与功能两相宜 充满巧思工业风小窝</h5>
+                      <p class="card-text">为了符合工业风的调性，空间感的营造是重点，在狭长型的格局中， 设计师尽量将量体 往两边放，保留中间的开阔感。在家具的装饰和搭配上，硬朗而随性业风气息也进一步蔓延…</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer">
+     <div class=" d-none d-md-block">
+      <div class="row">
+        <div class="col">
+          <p><span>Decoration</span> design</p>
+          <p>装修找我们，省钱又省心</p>
+        </div>
+        <div class="col">
+          <p>联系我们</p>
+          <p>000-000-0000</p>
+        </div>
+        <div class="col">
+          <p>联系邮箱</p>
+          <p>XXXXXX@com.cn</p>
+        </div>
+      </div>
+     </div>
+    </div>
+    <div class="d-md-none footer_md fot_sm">
+      <p><span>Decoration</span> design</p>
+      <p>装修找我们，省钱又省心</p>
+      <p>联系我们 000-000-0000</p>
+      <p>联系邮箱 XXXXXX@com.cn</p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/src/layui.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
